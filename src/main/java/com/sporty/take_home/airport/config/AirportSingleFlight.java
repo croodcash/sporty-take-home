@@ -11,8 +11,8 @@ public class AirportSingleFlight {
         AIRPORT_DETAIL
     }
 
-    @Bean("airportSingleFlight")
-    public SingleFlight airportSingleFlight(){
+    @Bean("singleFlight")
+    public SingleFlight singleFlight(){
         return new SingleFlight();
     }
 

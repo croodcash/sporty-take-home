@@ -20,12 +20,16 @@ import java.util.List;
 
 @Slf4j
 @Service
-@RequiredArgsConstructor
 public class AirportRemoteQuery implements AirportQuery {
 
-    @Qualifier("airportSingleFlight")
     private final SingleFlight airportSingleFlight;
     private final AirportApiProperties apiProperties;
+
+    public AirportRemoteQuery(@Qualifier("singleFlight") SingleFlight airportSingleFlight, 
+                             AirportApiProperties apiProperties) {
+        this.airportSingleFlight = airportSingleFlight;
+        this.apiProperties = apiProperties;
+    }
 
     @Override
     public List<AirportDetailView> findAllByCode(String code) {
