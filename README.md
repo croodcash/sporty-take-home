@@ -266,3 +266,6 @@ Enable debug logging for troubleshooting:
 logging.level.com.sporty.take_home.airport=DEBUG
 logging.level.io.github.resilience4j=DEBUG
 ```
+
+
+ps: docs generated with help of AI along with implementation of cache adapter. single flight implementation also reuse from other  existing generic lib codebase.
